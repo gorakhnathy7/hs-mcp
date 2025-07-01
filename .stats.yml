@@ -1,0 +1,4 @@
+configured_endpoints: 102
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/juspay-hyperswitch%2Fhyperswitch-f77d5e401a41eb2896ad4959f81e98a857c856538e65b7b21155cc19157fc487.yml
+openapi_spec_hash: 1e60b2c0b80958fe6ce4434d54b053c4
+config_hash: f79a17e47983dce96a050c2826e22cf4
