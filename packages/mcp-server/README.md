@@ -9,8 +9,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 Because it's not published yet, clone the repo and build it:
 
 ```sh
-git clone git@github.com:stainless-sdks/hyperswitch-typescript.git
-cd hyperswitch-typescript
+git clone git@github.com:gorakhnathy7/hs-mcp.git
+cd hs-mcp
 ./scripts/bootstrap
 ./scripts/build
 ```
@@ -43,11 +43,7 @@ For clients with a configuration JSON, it might look something like this:
   "mcpServers": {
     "hyperswitch_api": {
       "command": "node",
-      "args": [
-        "/path/to/local/hyperswitch-typescript/packages/mcp-server",
-        "--client=claude",
-        "--tools=dynamic"
-      ],
+      "args": ["/path/to/local/hs-mcp/packages/mcp-server", "--client=claude", "--tools=dynamic"],
       "env": {
         "HYPERSWITCH_API_KEY": "My API Key",
         "HYPERSWITCH_EPHEMERAL_KEY": "My Ephemeral Key",
