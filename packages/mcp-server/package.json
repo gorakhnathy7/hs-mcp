@@ -1,6 +1,6 @@
 {
   "name": "hyperswitch-mcp",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "The official MCP Server for the Hyperswitch API",
   "author": "Hyperswitch <hyperswitch@juspay.in>",
   "types": "dist/index.d.ts",
