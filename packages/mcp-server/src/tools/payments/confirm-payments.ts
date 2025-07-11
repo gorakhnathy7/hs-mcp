@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'confirm_payments',
   description:
-    'Confirms a payment intent that was previously created with `confirm: false`. This action attempts to authorize the payment with the payment processor.\n\nExpected status transitions after confirmation:\n- `succeeded`: If authorization is successful and `capture_method` is `automatic`.\n- `requires_capture`: If authorization is successful and `capture_method` is `manual`.\n- `failed`: If authorization fails.',
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nConfirms a payment intent that was previously created with `confirm: false`. This action attempts to authorize the payment with the payment processor.\n\nExpected status transitions after confirmation:\n- `succeeded`: If authorization is successful and `capture_method` is `automatic`.\n- `requires_capture`: If authorization is successful and `capture_method` is `manual`.\n- `failed`: If authorization fails.",
   inputSchema: {
     type: 'object',
     properties: {

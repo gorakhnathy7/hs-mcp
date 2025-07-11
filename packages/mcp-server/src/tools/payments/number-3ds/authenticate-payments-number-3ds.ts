@@ -1,5 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+import { maybeFilter } from 'hyperswitch-mcp/filtering';
 import { asTextContentResult } from 'hyperswitch-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
@@ -17,7 +18,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'authenticate_payments_number_3ds',
-  description: 'External 3DS Authentication is performed and returns the AuthenticationResponse',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nExternal 3DS Authentication is performed and returns the AuthenticationResponse\n\n# Response Schema\n```json\n{\n  type: 'object',\n  properties: {\n    three_ds_requestor_url: {\n      type: 'string',\n      description: 'Three DS Requestor URL'\n    },\n    trans_status: {\n      type: 'string',\n      description: 'Indicates the transaction status',\n      enum: [        'Y',\n        'N',\n        'U',\n        'A',\n        'R',\n        'C',\n        'D',\n        'I'\n      ]\n    },\n    acs_reference_number: {\n      type: 'string',\n      description: 'Unique identifier assigned by the EMVCo(Europay, Mastercard and Visa)'\n    },\n    acs_signed_content: {\n      type: 'string',\n      description: 'Contains the JWS object created by the ACS for the ARes(Authentication Response) message'\n    },\n    acs_trans_id: {\n      type: 'string',\n      description: 'Unique identifier assigned by the ACS to identify a single transaction'\n    },\n    acs_url: {\n      type: 'string',\n      description: 'Access Server URL to be used for challenge submission'\n    },\n    challenge_request: {\n      type: 'string',\n      description: 'Challenge request which should be sent to acs_url'\n    },\n    three_ds_requestor_app_url: {\n      type: 'string',\n      description: 'Merchant app declaring their URL within the CReq message so that the Authentication app can call the Merchant app after OOB authentication has occurred'\n    },\n    three_dsserver_trans_id: {\n      type: 'string',\n      description: 'Unique identifier assigned by the 3DS Server to identify a single transaction'\n    }\n  },\n  required: [    'three_ds_requestor_url',\n    'trans_status'\n  ]\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {
@@ -80,6 +82,12 @@ export const tool: Tool = {
           'sdk_trans_id',
         ],
       },
+      jq_filter: {
+        type: 'string',
+        title: 'jq Filter',
+        description:
+          'A jq filter to apply to the response to include certain fields. Consult the output schema in the tool description to see the fields that are available.\n\nFor example: to include only the `name` field in every object of a results array, you can provide ".results[].name".\n\nFor more information, see the [jq documentation](https://jqlang.org/manual/).',
+      },
     },
     $defs: {
       three_ds_completion_indicator: {
@@ -93,7 +101,9 @@ export const tool: Tool = {
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
   const { payment_id, ...body } = args as any;
-  return asTextContentResult(await client.payments.number3DS.authenticate(payment_id, body));
+  return asTextContentResult(
+    await maybeFilter(args, await client.payments.number3DS.authenticate(payment_id, body)),
+  );
 };
 
 export default { metadata, tool, handler };
