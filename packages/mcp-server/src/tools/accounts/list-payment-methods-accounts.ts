@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'list_payment_methods_accounts',
   description:
-    'Lists the applicable payment methods for a particular Merchant ID.\nUse the client secret and publishable key authorization to list all relevant payment methods of the merchant for the payment corresponding to the client secret.',
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nLists the applicable payment methods for a particular Merchant ID.\nUse the client secret and publishable key authorization to list all relevant payment methods of the merchant for the payment corresponding to the client secret.",
   inputSchema: {
     type: 'object',
     properties: {

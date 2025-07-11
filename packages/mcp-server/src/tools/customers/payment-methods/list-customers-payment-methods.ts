@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'list_customers_payment_methods',
-  description: 'Lists all the applicable payment methods for a particular Customer ID.',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nLists all the applicable payment methods for a particular Customer ID.",
   inputSchema: {
     type: 'object',
     properties: {

@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'update_customers',
-  description: "Updates the customer's details in a customer object.",
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nUpdates the customer's details in a customer object.",
   inputSchema: {
     type: 'object',
     properties: {

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'create_payment_methods',
   description:
-    'Creates and stores a payment method against a customer.\nIn case of cards, this API should be used only by PCI compliant merchants.',
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreates and stores a payment method against a customer.\nIn case of cards, this API should be used only by PCI compliant merchants.",
   inputSchema: {
     type: 'object',
     properties: {
