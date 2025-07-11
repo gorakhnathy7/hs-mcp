@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'create_payments',
   description:
-    "Creates a payment resource, which represents a customer's intent to pay.\nThis endpoint is the starting point for various payment flows:\n",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreates a payment resource, which represents a customer's intent to pay.\nThis endpoint is the starting point for various payment flows:\n",
   inputSchema: {
     type: 'object',
     properties: {

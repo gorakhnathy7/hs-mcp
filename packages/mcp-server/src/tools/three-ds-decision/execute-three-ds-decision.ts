@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'execute_three_ds_decision',
-  description: '3DS Decision - Execute',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\n3DS Decision - Execute",
   inputSchema: {
     type: 'object',
     properties: {

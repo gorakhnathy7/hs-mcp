@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'retrieve_payments',
   description:
-    'Retrieves a Payment. This API can also be used to get the status of a previously initiated payment or next action for an ongoing payment',
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nRetrieves a Payment. This API can also be used to get the status of a previously initiated payment or next action for an ongoing payment",
   inputSchema: {
     type: 'object',
     properties: {
