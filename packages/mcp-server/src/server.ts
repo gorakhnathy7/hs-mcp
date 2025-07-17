@@ -28,11 +28,7 @@ export const server = new McpServer(
     name: 'hyperswitch_api',
     version: '0.0.1-alpha.1',
   },
-  {
-    capabilities: {
-      tools: {},
-    },
-  },
+  { capabilities: { tools: {} } },
 );
 
 /**
