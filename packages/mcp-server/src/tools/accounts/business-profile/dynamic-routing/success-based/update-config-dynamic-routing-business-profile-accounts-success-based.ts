@@ -89,11 +89,9 @@ export const tool: Tool = {
                   type: 'number',
                 },
               },
-              required: [],
             },
           },
         },
-        required: [],
       },
       config: {
         type: 'object',
@@ -108,7 +106,6 @@ export const tool: Tool = {
                 type: 'integer',
               },
             },
-            required: [],
           },
           default_success_rate: {
             type: 'number',
@@ -130,7 +127,6 @@ export const tool: Tool = {
             enum: ['merchant', 'global'],
           },
         },
-        required: [],
       },
       params: {
         type: 'array',
@@ -145,6 +141,7 @@ export const tool: Tool = {
           'A jq filter to apply to the response to include certain fields. Consult the output schema in the tool description to see the fields that are available.\n\nFor example: to include only the `name` field in every object of a results array, you can provide ".results[].name".\n\nFor more information, see the [jq documentation](https://jqlang.org/manual/).',
       },
     },
+    required: ['account_id', 'profile_id', 'algorithm_id', 'decision_engine_configs'],
     $defs: {
       decision_engine_gateway_wise_extra_score: {
         type: 'object',

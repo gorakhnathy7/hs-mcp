@@ -28,6 +28,7 @@ export const tool: Tool = {
         type: 'string',
       },
     },
+    required: ['account_id', 'merchant_connector_id'],
   },
 };
 

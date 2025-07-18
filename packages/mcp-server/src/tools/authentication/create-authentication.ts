@@ -57,6 +57,7 @@ export const tool: Tool = {
         description: 'The URL to which the user should be redirected after authentication.',
       },
     },
+    required: ['amount', 'currency'],
     $defs: {
       currency: {
         type: 'string',
@@ -241,7 +242,6 @@ export const tool: Tool = {
             description: 'The merchant id of the card.',
           },
         },
-        required: [],
       },
       authentication_connectors: {
         type: 'string',

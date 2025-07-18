@@ -33,6 +33,7 @@ export const tool: Tool = {
             enum: ['card_bin'],
           },
         },
+        required: ['data', 'type'],
       },
       {
         type: 'object',
@@ -45,6 +46,7 @@ export const tool: Tool = {
             enum: ['fingerprint'],
           },
         },
+        required: ['data', 'type'],
       },
       {
         type: 'object',
@@ -57,6 +59,7 @@ export const tool: Tool = {
             enum: ['extended_card_bin'],
           },
         },
+        required: ['data', 'type'],
       },
     ],
     properties: {

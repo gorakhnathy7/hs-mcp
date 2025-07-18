@@ -52,6 +52,7 @@ export const tool: Tool = {
           "A dynamic suffix that appears on your customer's credit card statement. This is concatenated with the (shortened) descriptor prefix set on your account to form the complete statement descriptor. The combined length should not exceed connector-specific limits (typically 22 characters).",
       },
     },
+    required: ['payment_id'],
     $defs: {
       merchant_connector_details_wrap: {
         type: 'object',
@@ -81,7 +82,6 @@ export const tool: Tool = {
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
           },
         },
-        required: [],
       },
     },
   },

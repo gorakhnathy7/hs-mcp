@@ -21,12 +21,16 @@ export const tool: Tool = {
   inputSchema: {
     type: 'object',
     properties: {
-      payout_id: {
+      path_payout_id: {
+        type: 'string',
+      },
+      body_payout_id: {
         type: 'string',
         description:
           'Unique identifier for the payout. This ensures idempotency for multiple payouts\nthat have been done by a single merchant. This field is auto generated and is returned in the API response.',
       },
     },
+    required: ['path_payout_id', 'body_payout_id'],
   },
 };
 

@@ -146,6 +146,7 @@ export const tool: Tool = {
           'Will be used to expire client secret after certain amount of time to be supplied in seconds\n(900) for 15 mins',
       },
     },
+    required: ['payout_id'],
     $defs: {
       address: {
         type: 'object',
@@ -168,10 +169,8 @@ export const tool: Tool = {
                 description: 'The contact number',
               },
             },
-            required: [],
           },
         },
-        required: [],
       },
       address_details: {
         type: 'object',
@@ -214,7 +213,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       country_alpha2: {
         type: 'string',
@@ -719,7 +717,6 @@ export const tool: Tool = {
             description: 'Primary color to be used in the form represented in hex format',
           },
         },
-        required: [],
       },
       method_data: {
         anyOf: [

@@ -41,7 +41,6 @@ export const tool: Tool = {
               'The start amount to filter list of transactions which are greater than or equal to the start amount',
           },
         },
-        required: [],
       },
       connector: {
         type: 'array',
@@ -98,6 +97,7 @@ export const tool: Tool = {
         },
       },
     },
+    required: ['start_time'],
     $defs: {
       currency: {
         type: 'string',

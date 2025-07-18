@@ -47,6 +47,7 @@ export const tool: Tool = {
           'The time range for which objects are needed. TimeRange has two fields start_time and end_time from which objects can be filtered as per required scenarios (created_at, time less than, greater than etc).',
       },
     },
+    required: ['created', 'customer_id', 'ending_before', 'limit', 'starting_after', 'time_range'],
   },
 };
 

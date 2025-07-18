@@ -105,6 +105,7 @@ export const tool: Tool = {
           'A boolean value to indicate if the connector is in Test mode. By default, its value is false.',
       },
     },
+    required: ['account_id', 'connector_name', 'connector_type'],
     $defs: {
       connector: {
         type: 'string',
@@ -747,7 +748,6 @@ export const tool: Tool = {
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
           },
         },
-        required: [],
       },
       connector_wallet_details: {
         type: 'object',
@@ -775,7 +775,6 @@ export const tool: Tool = {
             description: 'This field contains the Samsung Pay certificates and credentials',
           },
         },
-        required: [],
       },
       merchant_connector_webhook_details: {
         type: 'object',

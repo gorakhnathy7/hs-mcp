@@ -81,6 +81,7 @@ export const tool: Tool = {
         },
       },
     },
+    required: ['currency', 'entity_type', 'start_time'],
     $defs: {
       currency: {
         type: 'string',

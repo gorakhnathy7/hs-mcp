@@ -33,6 +33,7 @@ export const tool: Tool = {
         description: 'Reason for incremental authorization',
       },
     },
+    required: ['payment_id', 'amount'],
   },
 };
 
