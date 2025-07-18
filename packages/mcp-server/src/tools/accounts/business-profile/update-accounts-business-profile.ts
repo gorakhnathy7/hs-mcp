@@ -189,6 +189,7 @@ export const tool: Tool = {
         $ref: '#/$defs/webhook_details',
       },
     },
+    required: ['account_id', 'profile_id'],
     $defs: {
       authentication_connector_details: {
         type: 'object',
@@ -715,14 +716,12 @@ export const tool: Tool = {
                       description: 'Position of the key-value pair in the UI',
                     },
                   },
-                  required: [],
                 },
               },
               required: ['key', 'value'],
             },
           },
         },
-        required: [],
       },
       business_payout_link_config: {
         allOf: [
@@ -757,7 +756,6 @@ export const tool: Tool = {
             description: 'Primary color to be used in the form represented in hex format',
           },
         },
-        required: [],
       },
       static_routing_algorithm: {
         anyOf: [

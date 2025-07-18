@@ -61,6 +61,7 @@ export const tool: Tool = {
         $ref: '#/$defs/split_refund',
       },
     },
+    required: ['payment_id'],
     $defs: {
       merchant_connector_details_wrap: {
         type: 'object',
@@ -90,7 +91,6 @@ export const tool: Tool = {
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
           },
         },
-        required: [],
       },
       split_refund: {
         anyOf: [
@@ -113,7 +113,6 @@ export const tool: Tool = {
                       "Toggle for reverting the transfer that was made during the charge.\nIf set to false, the funds are pulled from the main platform's account.",
                   },
                 },
-                required: [],
               },
             },
             required: ['stripe_split_refund'],

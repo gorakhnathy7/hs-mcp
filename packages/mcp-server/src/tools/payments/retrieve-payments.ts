@@ -42,6 +42,7 @@ export const tool: Tool = {
         description: 'Decider to enable or disable the connector call for retrieve request',
       },
     },
+    required: ['payment_id'],
   },
 };
 

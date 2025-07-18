@@ -64,6 +64,7 @@ export const tool: Tool = {
         description: 'Indicates whether the payment method is eligible for recurring payments',
       },
     },
+    required: [],
     $defs: {
       country_alpha2: {
         type: 'string',

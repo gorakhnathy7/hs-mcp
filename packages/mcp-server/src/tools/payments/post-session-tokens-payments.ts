@@ -53,6 +53,7 @@ export const tool: Tool = {
         $ref: '#/$defs/payment_method_type',
       },
     },
+    required: ['payment_id', 'client_secret', 'payment_method', 'payment_method_type'],
     $defs: {
       payment_method_type: {
         type: 'string',

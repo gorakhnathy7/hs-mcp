@@ -29,6 +29,7 @@ export const tool: Tool = {
         description: 'Sync with the connector to get the payout details (defaults to false)',
       },
     },
+    required: ['payout_id'],
   },
 };
 

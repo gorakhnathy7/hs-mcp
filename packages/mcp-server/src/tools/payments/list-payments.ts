@@ -63,6 +63,7 @@ export const tool: Tool = {
         description: 'A cursor for use in pagination, fetch the next list after some object',
       },
     },
+    required: [],
   },
 };
 

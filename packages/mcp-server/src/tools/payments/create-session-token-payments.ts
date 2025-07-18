@@ -41,6 +41,7 @@ export const tool: Tool = {
         $ref: '#/$defs/merchant_connector_details_wrap',
       },
     },
+    required: ['client_secret', 'payment_id', 'wallets'],
     $defs: {
       payment_method_type: {
         type: 'string',
@@ -178,7 +179,6 @@ export const tool: Tool = {
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
           },
         },
-        required: [],
       },
     },
   },

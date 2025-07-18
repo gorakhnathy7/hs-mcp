@@ -98,6 +98,7 @@ export const tool: Tool = {
         $ref: '#/$defs/webhook_details',
       },
     },
+    required: ['account_id', 'merchant_id'],
     $defs: {
       merchant_details: {
         type: 'object',
@@ -138,7 +139,6 @@ export const tool: Tool = {
             description: 'The business website of the merchant',
           },
         },
-        required: [],
       },
       address_details: {
         type: 'object',
@@ -181,7 +181,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       country_alpha2: {
         type: 'string',
@@ -977,7 +976,6 @@ export const tool: Tool = {
             description: 'Primary color to be used in the form represented in hex format',
           },
         },
-        required: [],
       },
       primary_business_details: {
         type: 'object',

@@ -55,6 +55,7 @@ export const tool: Tool = {
         description: 'The country code for the customer phone number',
       },
     },
+    required: [],
     $defs: {
       address_details: {
         type: 'object',
@@ -97,7 +98,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       country_alpha2: {
         type: 'string',

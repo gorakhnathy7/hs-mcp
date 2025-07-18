@@ -91,7 +91,6 @@ export const tool: Tool = {
             enum: ['web', 'android', 'ios'],
           },
         },
-        required: [],
       },
       issuer: {
         type: 'object',
@@ -118,6 +117,7 @@ export const tool: Tool = {
         required: ['card_network'],
       },
     },
+    required: ['payment', 'routing_id'],
     $defs: {
       currency: {
         type: 'string',

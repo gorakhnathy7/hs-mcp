@@ -37,6 +37,7 @@ export const tool: Tool = {
         $ref: '#/$defs/transaction_type',
       },
     },
+    required: [],
     $defs: {
       static_routing_algorithm: {
         anyOf: [

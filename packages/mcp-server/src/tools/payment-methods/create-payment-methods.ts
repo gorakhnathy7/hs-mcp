@@ -92,6 +92,7 @@ export const tool: Tool = {
         $ref: '#/$defs/wallet',
       },
     },
+    required: ['payment_method'],
     $defs: {
       bank: {
         anyOf: [
@@ -476,10 +477,8 @@ export const tool: Tool = {
                 description: 'The contact number',
               },
             },
-            required: [],
           },
         },
-        required: [],
       },
       address_details: {
         type: 'object',
@@ -522,7 +521,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       card_detail: {
         type: 'object',

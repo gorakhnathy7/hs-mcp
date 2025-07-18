@@ -21,10 +21,8 @@ export const tool: Tool = {
   inputSchema: {
     type: 'object',
     properties: {
-      payment_id: {
+      path_payment_id: {
         type: 'string',
-        description:
-          'Optional. A merchant-provided unique identifier for the payment, contains 30 characters long (e.g., "pay_mbabizu24mvu3mela5njyhpit4"). If provided, it ensures idempotency for the payment creation request. If omitted, Hyperswitch generates a unique ID for the payment.',
       },
       all_keys_required: {
         type: 'boolean',
@@ -153,6 +151,11 @@ export const tool: Tool = {
       payment_experience: {
         $ref: '#/$defs/payment_experience',
       },
+      body_payment_id: {
+        type: 'string',
+        description:
+          'Optional. A merchant-provided unique identifier for the payment, contains 30 characters long (e.g., "pay_mbabizu24mvu3mela5njyhpit4"). If provided, it ensures idempotency for the payment creation request. If omitted, Hyperswitch generates a unique ID for the payment.',
+      },
       payment_link: {
         type: 'boolean',
         description: 'Whether to generate the payment link for this payment or not (if applicable)',
@@ -268,6 +271,7 @@ export const tool: Tool = {
         $ref: '#/$defs/three_ds_completion_indicator',
       },
     },
+    required: ['path_payment_id'],
     $defs: {
       payment_method_type: {
         type: 'string',
@@ -404,10 +408,8 @@ export const tool: Tool = {
                 description: 'The contact number',
               },
             },
-            required: [],
           },
         },
-        required: [],
       },
       address_details: {
         type: 'object',
@@ -450,7 +452,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       country_alpha2: {
         type: 'string',
@@ -763,7 +764,6 @@ export const tool: Tool = {
             description: 'User-agent of the browser',
           },
         },
-        required: [],
       },
       capture_method: {
         type: 'string',
@@ -913,7 +913,6 @@ export const tool: Tool = {
                 description: 'payload required by airwallex',
               },
             },
-            required: [],
           },
           apple_pay: {
             type: 'object',
@@ -997,7 +996,6 @@ export const tool: Tool = {
                 ],
               },
             },
-            required: [],
           },
           braintree: {
             type: 'object',
@@ -1024,10 +1022,8 @@ export const tool: Tool = {
                   'Information about the order category that merchant wants to specify at connector level. (e.g. In Noon Payments it can take values like "pay", "food", or any other custom string set by the merchant in Noon\'s Dashboard)',
               },
             },
-            required: [],
           },
         },
-        required: [],
       },
       ctp_service_details: {
         type: 'object',
@@ -1052,7 +1048,6 @@ export const tool: Tool = {
             description: 'session transaction flow id',
           },
         },
-        required: [],
       },
       ctp_service_provider: {
         type: 'string',
@@ -1302,7 +1297,6 @@ export const tool: Tool = {
             description: "A way to update the mandate's payment method details",
           },
         },
-        required: [],
       },
       mandate_type: {
         anyOf: [
@@ -1381,7 +1375,6 @@ export const tool: Tool = {
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
           },
         },
-        required: [],
       },
       order_details_with_amount: {
         type: 'object',
@@ -1643,14 +1636,12 @@ export const tool: Tool = {
                       description: 'Position of the key-value pair in the UI',
                     },
                   },
-                  required: [],
                 },
               },
               required: ['key', 'value'],
             },
           },
         },
-        required: [],
       },
       payment_method_data_request: {
         anyOf: [
@@ -1987,7 +1978,6 @@ export const tool: Tool = {
                             description: "paypal's email address",
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['paypal_redirect'],
@@ -2227,7 +2217,6 @@ export const tool: Tool = {
                             description: 'The billing email',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['klarna_redirect'],
@@ -2275,7 +2264,6 @@ export const tool: Tool = {
                             description: 'The billing name',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['afterpay_clearpay_redirect'],
@@ -2383,7 +2371,6 @@ export const tool: Tool = {
                             type: 'string',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['blik'],
@@ -2469,7 +2456,6 @@ export const tool: Tool = {
                             type: 'string',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['interac'],
@@ -2499,7 +2485,6 @@ export const tool: Tool = {
                             type: 'string',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['online_banking_finland'],
@@ -2565,7 +2550,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/bank_redirect_billing',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['przelewy24'],
@@ -2828,10 +2812,8 @@ export const tool: Tool = {
                                 description: 'The Email ID for ACH billing',
                               },
                             },
-                            required: [],
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['ach_bank_transfer'],
@@ -2864,7 +2846,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/sepa_and_bacs_billing_details',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['bacs_bank_transfer'],
@@ -2882,10 +2863,8 @@ export const tool: Tool = {
                                 type: 'string',
                               },
                             },
-                            required: [],
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['multibanco_bank_transfer'],
@@ -2900,7 +2879,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/doku_billing_details',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['permata_bank_transfer'],
@@ -2915,7 +2893,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/doku_billing_details',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['bca_bank_transfer'],
@@ -2930,7 +2907,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/doku_billing_details',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['bni_va_bank_transfer'],
@@ -2945,7 +2921,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/doku_billing_details',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['bri_va_bank_transfer'],
@@ -2960,7 +2935,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/doku_billing_details',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['cimb_va_bank_transfer'],
@@ -2975,7 +2949,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/doku_billing_details',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['danamon_va_bank_transfer'],
@@ -2990,7 +2963,6 @@ export const tool: Tool = {
                             $ref: '#/$defs/doku_billing_details',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['mandiri_va_bank_transfer'],
@@ -3022,7 +2994,6 @@ export const tool: Tool = {
                             description: 'Source bank account number',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['pix'],
@@ -3046,7 +3017,6 @@ export const tool: Tool = {
                             type: 'string',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['local_bank_transfer'],
@@ -3120,7 +3090,6 @@ export const tool: Tool = {
                 $ref: '#/$defs/address',
               },
             },
-            required: [],
           },
           {
             type: 'object',
@@ -3130,7 +3099,6 @@ export const tool: Tool = {
                 $ref: '#/$defs/address',
               },
             },
-            required: [],
           },
           {
             type: 'object',
@@ -3148,7 +3116,6 @@ export const tool: Tool = {
                             type: 'string',
                           },
                         },
-                        required: [],
                       },
                     },
                     required: ['upi_collect'],
@@ -3543,7 +3510,6 @@ export const tool: Tool = {
             description: 'The billing name for bank debits',
           },
         },
-        required: [],
       },
       sepa_and_bacs_billing_details: {
         type: 'object',
@@ -3557,7 +3523,6 @@ export const tool: Tool = {
             description: 'The billing name for SEPA and BACS billing',
           },
         },
-        required: [],
       },
       doku_billing_details: {
         type: 'object',
@@ -3575,7 +3540,6 @@ export const tool: Tool = {
             description: 'The billing second name for Doku',
           },
         },
-        required: [],
       },
       real_time_payment_data: {
         anyOf: [
@@ -3627,7 +3591,6 @@ export const tool: Tool = {
             type: 'string',
           },
         },
-        required: [],
       },
       voucher_data: {
         anyOf: [
@@ -3646,7 +3609,6 @@ export const tool: Tool = {
                     description: "The shopper's social security number",
                   },
                 },
-                required: [],
               },
             },
             required: ['boleto'],
@@ -3670,7 +3632,6 @@ export const tool: Tool = {
                     description: 'The billing second name for Alfamart',
                   },
                 },
-                required: [],
               },
             },
             required: ['alfamart'],
@@ -3694,7 +3655,6 @@ export const tool: Tool = {
                     description: 'The billing second name for Alfamart',
                   },
                 },
-                required: [],
               },
             },
             required: ['indomaret'],
@@ -3775,7 +3735,6 @@ export const tool: Tool = {
             description: 'The telephone number for Japanese convenience stores',
           },
         },
-        required: [],
       },
       open_banking_data: {
         type: 'object',

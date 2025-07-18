@@ -26,6 +26,7 @@ export const tool: Tool = {
         description: 'The unique identifier for a merchant profile',
       },
     },
+    required: [],
   },
 };
 

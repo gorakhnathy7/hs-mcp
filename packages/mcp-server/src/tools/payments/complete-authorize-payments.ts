@@ -35,6 +35,7 @@ export const tool: Tool = {
         $ref: '#/$defs/three_ds_completion_indicator',
       },
     },
+    required: ['payment_id', 'client_secret'],
     $defs: {
       address: {
         type: 'object',
@@ -57,10 +58,8 @@ export const tool: Tool = {
                 description: 'The contact number',
               },
             },
-            required: [],
           },
         },
-        required: [],
       },
       address_details: {
         type: 'object',
@@ -103,7 +102,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       country_alpha2: {
         type: 'string',
