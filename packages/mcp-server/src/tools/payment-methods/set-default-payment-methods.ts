@@ -37,6 +37,7 @@ export const tool: Tool = {
     },
     required: ['customer_id', 'payment_method_id'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

@@ -43,6 +43,7 @@ export const tool: Tool = {
     },
     required: ['start_time'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

@@ -37,6 +37,9 @@ export const tool: Tool = {
     },
     required: ['relay_id', 'X-Profile-Id'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

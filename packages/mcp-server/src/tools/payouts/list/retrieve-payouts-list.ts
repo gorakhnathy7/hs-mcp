@@ -49,6 +49,9 @@ export const tool: Tool = {
     },
     required: ['created', 'customer_id', 'ending_before', 'limit', 'starting_after', 'time_range'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

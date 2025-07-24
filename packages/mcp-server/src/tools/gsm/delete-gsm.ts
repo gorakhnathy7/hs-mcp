@@ -51,6 +51,7 @@ export const tool: Tool = {
     },
     required: ['code', 'connector', 'flow', 'message', 'sub_flow'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

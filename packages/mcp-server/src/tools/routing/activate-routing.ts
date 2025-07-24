@@ -34,6 +34,7 @@ export const tool: Tool = {
     },
     required: ['routing_algorithm_id'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

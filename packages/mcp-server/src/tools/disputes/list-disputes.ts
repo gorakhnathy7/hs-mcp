@@ -94,6 +94,9 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
