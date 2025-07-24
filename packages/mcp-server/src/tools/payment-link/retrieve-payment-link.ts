@@ -39,6 +39,9 @@ export const tool: Tool = {
     },
     required: ['payment_link_id'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

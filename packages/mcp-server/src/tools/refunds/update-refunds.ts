@@ -44,6 +44,7 @@ export const tool: Tool = {
     },
     required: ['refund_id'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

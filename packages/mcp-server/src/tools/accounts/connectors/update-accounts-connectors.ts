@@ -1211,6 +1211,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

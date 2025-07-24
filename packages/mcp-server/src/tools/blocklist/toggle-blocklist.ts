@@ -35,6 +35,7 @@ export const tool: Tool = {
     },
     required: ['status'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

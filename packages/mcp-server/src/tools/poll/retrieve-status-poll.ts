@@ -34,6 +34,9 @@ export const tool: Tool = {
     },
     required: ['poll_id'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

@@ -34,6 +34,9 @@ export const tool: Tool = {
     },
     required: ['method_id'],
   },
+  annotations: {
+    idempotentHint: true,
+  },
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

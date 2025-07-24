@@ -38,6 +38,7 @@ export const tool: Tool = {
     },
     required: ['account_id', 'kv_enabled'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
