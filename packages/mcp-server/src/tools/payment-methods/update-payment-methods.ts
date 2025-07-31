@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'update_payment_methods',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nUpdate an existing payment method of a customer.\nThis API is useful for use cases such as updating the card number for expired cards to prevent discontinuity in recurring payments.",
+    'Update an existing payment method of a customer.\nThis API is useful for use cases such as updating the card number for expired cards to prevent discontinuity in recurring payments.',
   inputSchema: {
     type: 'object',
     properties: {

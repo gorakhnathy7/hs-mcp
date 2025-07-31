@@ -16,8 +16,7 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'post_session_tokens_payments',
-  description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nPayments - Post Session Tokens",
+  description: 'Payments - Post Session Tokens',
   inputSchema: {
     type: 'object',
     properties: {
