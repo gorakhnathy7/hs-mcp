@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'create_customers',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreates a customer object and stores the customer details to be reused for future payments.\nIncase the customer already exists in the system, this API will respond with the customer details.",
+    'Creates a customer object and stores the customer details to be reused for future payments.\nIncase the customer already exists in the system, this API will respond with the customer details.',
   inputSchema: {
     type: 'object',
     properties: {
