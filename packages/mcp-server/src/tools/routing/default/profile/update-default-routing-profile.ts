@@ -161,9 +161,9 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  const { profile_id, ...body } = args as any;
+  const { profile_id, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.routing.default.profile.update(profile_id, body)),
+    await maybeFilter(jq_filter, await client.routing.default.profile.update(profile_id, body)),
   );
 };
 

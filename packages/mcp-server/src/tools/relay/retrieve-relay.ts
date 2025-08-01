@@ -43,8 +43,8 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  const { relay_id, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.relay.retrieve(relay_id, body)));
+  const { relay_id, jq_filter, ...body } = args as any;
+  return asTextContentResult(await maybeFilter(jq_filter, await client.relay.retrieve(relay_id, body)));
 };
 
 export default { metadata, tool, handler };

@@ -38,8 +38,10 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  const { routing_algorithm_id, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.routing.activate(routing_algorithm_id)));
+  const { routing_algorithm_id, jq_filter, ...body } = args as any;
+  return asTextContentResult(
+    await maybeFilter(jq_filter, await client.routing.activate(routing_algorithm_id)),
+  );
 };
 
 export default { metadata, tool, handler };

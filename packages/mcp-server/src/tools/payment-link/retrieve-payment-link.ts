@@ -45,9 +45,9 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  const { payment_link_id, ...body } = args as any;
+  const { payment_link_id, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.paymentLink.retrieve(payment_link_id, body)),
+    await maybeFilter(jq_filter, await client.paymentLink.retrieve(payment_link_id, body)),
   );
 };
 

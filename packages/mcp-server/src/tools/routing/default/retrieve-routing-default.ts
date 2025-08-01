@@ -37,7 +37,8 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  return asTextContentResult(await maybeFilter(args, await client.routing.default.retrieve()));
+  const { jq_filter } = args as any;
+  return asTextContentResult(await maybeFilter(jq_filter, await client.routing.default.retrieve()));
 };
 
 export default { metadata, tool, handler };

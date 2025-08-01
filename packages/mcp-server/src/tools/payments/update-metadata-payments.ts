@@ -42,8 +42,10 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  const { payment_id, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.payments.updateMetadata(payment_id, body)));
+  const { payment_id, jq_filter, ...body } = args as any;
+  return asTextContentResult(
+    await maybeFilter(jq_filter, await client.payments.updateMetadata(payment_id, body)),
+  );
 };
 
 export default { metadata, tool, handler };

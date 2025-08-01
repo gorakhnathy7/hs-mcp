@@ -81,10 +81,10 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  const { algorithm_id, ...body } = args as any;
+  const { algorithm_id, jq_filter, ...body } = args as any;
   return asTextContentResult(
     await maybeFilter(
-      args,
+      jq_filter,
       await client.accounts.businessProfile.dynamicRouting.contracts.updateConfig(algorithm_id, body),
     ),
   );

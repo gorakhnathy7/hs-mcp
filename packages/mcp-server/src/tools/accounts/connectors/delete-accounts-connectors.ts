@@ -43,9 +43,9 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  const { merchant_connector_id, ...body } = args as any;
+  const { merchant_connector_id, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.accounts.connectors.delete(merchant_connector_id, body)),
+    await maybeFilter(jq_filter, await client.accounts.connectors.delete(merchant_connector_id, body)),
   );
 };
 
