@@ -116,8 +116,8 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
-  const body = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.events.profile.list(body)));
+  const { jq_filter, ...body } = args as any;
+  return asTextContentResult(await maybeFilter(jq_filter, await client.events.profile.list(body)));
 };
 
 export default { metadata, tool, handler };
