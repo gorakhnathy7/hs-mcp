@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource paymentMethods', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.customers.paymentMethods.list('customer_id');
     const rawResponse = await responsePromise.asResponse();
@@ -23,7 +23,7 @@ describe('resource paymentMethods', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -44,7 +44,7 @@ describe('resource paymentMethods', () => {
     ).rejects.toThrow(Hyperswitch.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSaved', async () => {
     const responsePromise = client.customers.paymentMethods.listSaved();
     const rawResponse = await responsePromise.asResponse();
@@ -56,7 +56,7 @@ describe('resource paymentMethods', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSaved: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource profileAcquirers', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.profileAcquirers.create({
       acquirer_assigned_merchant_id: 'M123456789',
@@ -31,7 +31,7 @@ describe('resource profileAcquirers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.profileAcquirers.create({
       acquirer_assigned_merchant_id: 'M123456789',
@@ -45,7 +45,7 @@ describe('resource profileAcquirers', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.profileAcquirers.update('profile_acquirer_id', {
       profile_id: 'profile_id',
@@ -59,7 +59,7 @@ describe('resource profileAcquirers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.profileAcquirers.update('profile_acquirer_id', {
       profile_id: 'profile_id',

@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource routing', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.routing.create({});
     const rawResponse = await responsePromise.asResponse();
@@ -23,7 +23,7 @@ describe('resource routing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.routing.retrieve('routing_algorithm_id');
     const rawResponse = await responsePromise.asResponse();
@@ -35,7 +35,7 @@ describe('resource routing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.routing.list();
     const rawResponse = await responsePromise.asResponse();
@@ -47,7 +47,7 @@ describe('resource routing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -58,7 +58,7 @@ describe('resource routing', () => {
     ).rejects.toThrow(Hyperswitch.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('activate', async () => {
     const responsePromise = client.routing.activate('routing_algorithm_id');
     const rawResponse = await responsePromise.asResponse();
@@ -70,7 +70,7 @@ describe('resource routing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deactivate', async () => {
     const responsePromise = client.routing.deactivate({});
     const rawResponse = await responsePromise.asResponse();
@@ -82,7 +82,7 @@ describe('resource routing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveActive', async () => {
     const responsePromise = client.routing.retrieveActive();
     const rawResponse = await responsePromise.asResponse();
@@ -94,7 +94,7 @@ describe('resource routing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveActive: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

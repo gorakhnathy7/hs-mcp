@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource elimination', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('toggle: only required params', async () => {
     const responsePromise = client.accounts.businessProfile.dynamicRouting.elimination.toggle('profile_id', {
       account_id: 'account_id',
@@ -26,7 +26,7 @@ describe('resource elimination', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('toggle: required and optional params', async () => {
     const response = await client.accounts.businessProfile.dynamicRouting.elimination.toggle('profile_id', {
       account_id: 'account_id',

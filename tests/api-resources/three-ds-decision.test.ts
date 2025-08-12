@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource threeDSDecision', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('execute: only required params', async () => {
     const responsePromise = client.threeDSDecision.execute({
       payment: { amount: 0, currency: 'AED' },
@@ -26,7 +26,7 @@ describe('resource threeDSDecision', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('execute: required and optional params', async () => {
     const response = await client.threeDSDecision.execute({
       payment: { amount: 0, currency: 'AED' },
