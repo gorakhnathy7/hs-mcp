@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource refunds', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.refunds.create({ payment_id: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' });
     const rawResponse = await responsePromise.asResponse();
@@ -23,7 +23,7 @@ describe('resource refunds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.refunds.create({
       payment_id: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
@@ -41,7 +41,7 @@ describe('resource refunds', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.refunds.retrieve('refund_id');
     const rawResponse = await responsePromise.asResponse();
@@ -53,7 +53,7 @@ describe('resource refunds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.refunds.update('refund_id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -65,7 +65,7 @@ describe('resource refunds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.refunds.list({ start_time: '2019-12-27T18:11:19.117Z' });
     const rawResponse = await responsePromise.asResponse();
@@ -77,7 +77,7 @@ describe('resource refunds', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.refunds.list({
       start_time: '2019-12-27T18:11:19.117Z',

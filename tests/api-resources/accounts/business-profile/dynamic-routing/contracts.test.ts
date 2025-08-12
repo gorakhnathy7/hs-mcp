@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource contracts', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('toggle: only required params', async () => {
     const responsePromise = client.accounts.businessProfile.dynamicRouting.contracts.toggle('profile_id', {
       account_id: 'account_id',
@@ -26,7 +26,7 @@ describe('resource contracts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('toggle: required and optional params', async () => {
     const response = await client.accounts.businessProfile.dynamicRouting.contracts.toggle('profile_id', {
       account_id: 'account_id',
@@ -36,7 +36,7 @@ describe('resource contracts', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateConfig: only required params', async () => {
     const responsePromise = client.accounts.businessProfile.dynamicRouting.contracts.updateConfig(
       'algorithm_id',
@@ -51,7 +51,7 @@ describe('resource contracts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateConfig: required and optional params', async () => {
     const response = await client.accounts.businessProfile.dynamicRouting.contracts.updateConfig(
       'algorithm_id',

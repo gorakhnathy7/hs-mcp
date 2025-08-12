@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource relay', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.relay.create({
       connector_id: 'mca_5apGeP94tMts6rg3U3kR',
@@ -29,7 +29,7 @@ describe('resource relay', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.relay.create({
       connector_id: 'mca_5apGeP94tMts6rg3U3kR',
@@ -41,7 +41,7 @@ describe('resource relay', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.relay.retrieve('relay_id', { 'X-Profile-Id': 'X-Profile-Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -53,7 +53,7 @@ describe('resource relay', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.relay.retrieve('relay_id', { 'X-Profile-Id': 'X-Profile-Id' });
   });

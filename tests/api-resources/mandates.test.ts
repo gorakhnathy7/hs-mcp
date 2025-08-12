@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource mandates', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.mandates.retrieve('mandate_id');
     const rawResponse = await responsePromise.asResponse();
@@ -23,7 +23,7 @@ describe('resource mandates', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('revoke', async () => {
     const responsePromise = client.mandates.revoke('mandate_id');
     const rawResponse = await responsePromise.asResponse();

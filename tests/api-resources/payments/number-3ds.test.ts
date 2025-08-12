@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource number3DS', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('authenticate: only required params', async () => {
     const responsePromise = client.payments.number3DS.authenticate('payment_id', {
       client_secret: 'client_secret',
@@ -27,7 +27,7 @@ describe('resource number3DS', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('authenticate: required and optional params', async () => {
     const response = await client.payments.number3DS.authenticate('payment_id', {
       client_secret: 'client_secret',

@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource accounts', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.accounts.create({ merchant_id: 'merchant_abc' });
     const rawResponse = await responsePromise.asResponse();
@@ -23,7 +23,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.accounts.create({
       merchant_id: 'merchant_abc',
@@ -85,7 +85,7 @@ describe('resource accounts', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.accounts.retrieve('account_id');
     const rawResponse = await responsePromise.asResponse();
@@ -97,7 +97,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.accounts.update('account_id', { merchant_id: 'merchant_abc' });
     const rawResponse = await responsePromise.asResponse();
@@ -109,7 +109,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.accounts.update('account_id', {
       merchant_id: 'merchant_abc',
@@ -169,7 +169,7 @@ describe('resource accounts', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.accounts.delete('account_id');
     const rawResponse = await responsePromise.asResponse();
@@ -181,7 +181,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('kv: only required params', async () => {
     const responsePromise = client.accounts.kv('account_id', { kv_enabled: true });
     const rawResponse = await responsePromise.asResponse();
@@ -193,12 +193,12 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('kv: required and optional params', async () => {
     const response = await client.accounts.kv('account_id', { kv_enabled: true });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listPaymentMethods', async () => {
     const responsePromise = client.accounts.listPaymentMethods();
     const rawResponse = await responsePromise.asResponse();
@@ -210,7 +210,7 @@ describe('resource accounts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listPaymentMethods: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
