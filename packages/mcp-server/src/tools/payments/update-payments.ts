@@ -101,6 +101,7 @@ export const tool: Tool = {
       frm_metadata: {
         type: 'object',
         description: 'Additional data related to some frm(Fraud Risk Management) connectors',
+        additionalProperties: true,
       },
       is_iframe_redirection_enabled: {
         type: 'boolean',
@@ -121,6 +122,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Metadata is useful for storing additional, structured information on an object.',
+        additionalProperties: true,
       },
       off_session: {
         type: 'boolean',
@@ -1332,6 +1334,7 @@ export const tool: Tool = {
           metadata: {
             type: 'object',
             description: 'Additional details required by mandate',
+            additionalProperties: true,
           },
           start_date: {
             type: 'string',
@@ -1363,10 +1366,12 @@ export const tool: Tool = {
             type: 'object',
             description:
               'Account details of the Connector. You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Useful for storing additional, structured information on an object.',
+            additionalProperties: true,
           },
           metadata: {
             type: 'object',
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
+            additionalProperties: true,
           },
         },
       },
@@ -1571,6 +1576,7 @@ export const tool: Tool = {
           payment_link_ui_rules: {
             type: 'object',
             description: 'Payment link configuration rules',
+            additionalProperties: true,
           },
           sdk_layout: {
             type: 'string',
@@ -1579,6 +1585,7 @@ export const tool: Tool = {
           sdk_ui_rules: {
             type: 'object',
             description: 'SDK configuration rules',
+            additionalProperties: true,
           },
           seller_name: {
             type: 'string',
@@ -1719,6 +1726,7 @@ export const tool: Tool = {
                     properties: {
                       ali_pay_qr: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['ali_pay_qr'],
@@ -1728,6 +1736,7 @@ export const tool: Tool = {
                     properties: {
                       ali_pay_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['ali_pay_redirect'],
@@ -1737,6 +1746,7 @@ export const tool: Tool = {
                     properties: {
                       ali_pay_hk_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['ali_pay_hk_redirect'],
@@ -1746,6 +1756,7 @@ export const tool: Tool = {
                     properties: {
                       amazon_pay_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['amazon_pay_redirect'],
@@ -1755,6 +1766,7 @@ export const tool: Tool = {
                     properties: {
                       momo_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['momo_redirect'],
@@ -1764,6 +1776,7 @@ export const tool: Tool = {
                     properties: {
                       kakao_pay_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['kakao_pay_redirect'],
@@ -1773,6 +1786,7 @@ export const tool: Tool = {
                     properties: {
                       go_pay_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['go_pay_redirect'],
@@ -1782,6 +1796,7 @@ export const tool: Tool = {
                     properties: {
                       gcash_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['gcash_redirect'],
@@ -1829,6 +1844,7 @@ export const tool: Tool = {
                     properties: {
                       apple_pay_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['apple_pay_redirect'],
@@ -1838,6 +1854,7 @@ export const tool: Tool = {
                     properties: {
                       apple_pay_third_party_sdk: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['apple_pay_third_party_sdk'],
@@ -1848,6 +1865,7 @@ export const tool: Tool = {
                       dana_redirect: {
                         type: 'object',
                         description: 'Wallet data for DANA redirect flow',
+                        additionalProperties: true,
                       },
                     },
                     required: ['dana_redirect'],
@@ -1922,6 +1940,7 @@ export const tool: Tool = {
                     properties: {
                       google_pay_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['google_pay_redirect'],
@@ -1931,6 +1950,7 @@ export const tool: Tool = {
                     properties: {
                       google_pay_third_party_sdk: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['google_pay_third_party_sdk'],
@@ -1957,6 +1977,7 @@ export const tool: Tool = {
                     properties: {
                       mobile_pay_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['mobile_pay_redirect'],
@@ -2095,6 +2116,7 @@ export const tool: Tool = {
                       twint_redirect: {
                         type: 'object',
                         description: 'Wallet data for Twint Redirection',
+                        additionalProperties: true,
                       },
                     },
                     required: ['twint_redirect'],
@@ -2105,6 +2127,7 @@ export const tool: Tool = {
                       vipps_redirect: {
                         type: 'object',
                         description: 'Wallet data for Vipps Redirection',
+                        additionalProperties: true,
                       },
                     },
                     required: ['vipps_redirect'],
@@ -2114,6 +2137,7 @@ export const tool: Tool = {
                     properties: {
                       touch_n_go_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['touch_n_go_redirect'],
@@ -2123,6 +2147,7 @@ export const tool: Tool = {
                     properties: {
                       we_chat_pay_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['we_chat_pay_redirect'],
@@ -2132,6 +2157,7 @@ export const tool: Tool = {
                     properties: {
                       we_chat_pay_qr: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['we_chat_pay_qr'],
@@ -2141,6 +2167,7 @@ export const tool: Tool = {
                     properties: {
                       cashapp_qr: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['cashapp_qr'],
@@ -2150,6 +2177,7 @@ export const tool: Tool = {
                     properties: {
                       swish_qr: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['swish_qr'],
@@ -2178,6 +2206,7 @@ export const tool: Tool = {
                     properties: {
                       revolut_pay: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['revolut_pay'],
@@ -2238,6 +2267,7 @@ export const tool: Tool = {
                       affirm_redirect: {
                         type: 'object',
                         description: 'For Affirm redirect as PayLater Option',
+                        additionalProperties: true,
                       },
                     },
                     required: ['affirm_redirect'],
@@ -2268,6 +2298,7 @@ export const tool: Tool = {
                       pay_bright_redirect: {
                         type: 'object',
                         description: 'For PayBright Redirect as PayLater Option',
+                        additionalProperties: true,
                       },
                     },
                     required: ['pay_bright_redirect'],
@@ -2278,6 +2309,7 @@ export const tool: Tool = {
                       walley_redirect: {
                         type: 'object',
                         description: 'For WalleyRedirect as PayLater Option',
+                        additionalProperties: true,
                       },
                     },
                     required: ['walley_redirect'],
@@ -2288,6 +2320,7 @@ export const tool: Tool = {
                       alma_redirect: {
                         type: 'object',
                         description: 'For Alma Redirection as PayLater Option',
+                        additionalProperties: true,
                       },
                     },
                     required: ['alma_redirect'],
@@ -2297,6 +2330,7 @@ export const tool: Tool = {
                     properties: {
                       atome_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['atome_redirect'],
@@ -2351,6 +2385,7 @@ export const tool: Tool = {
                     properties: {
                       bizum: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['bizum'],
@@ -2620,6 +2655,7 @@ export const tool: Tool = {
                     properties: {
                       local_bank_redirect: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['local_bank_redirect'],
@@ -2997,6 +3033,7 @@ export const tool: Tool = {
                     properties: {
                       pse: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['pse'],
@@ -3020,6 +3057,7 @@ export const tool: Tool = {
                     properties: {
                       instant_bank_transfer: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['instant_bank_transfer'],
@@ -3029,6 +3067,7 @@ export const tool: Tool = {
                     properties: {
                       instant_bank_transfer_finland: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['instant_bank_transfer_finland'],
@@ -3038,6 +3077,7 @@ export const tool: Tool = {
                     properties: {
                       instant_bank_transfer_poland: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['instant_bank_transfer_poland'],
@@ -3119,6 +3159,7 @@ export const tool: Tool = {
                     properties: {
                       upi_intent: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['upi_intent'],
@@ -3175,6 +3216,7 @@ export const tool: Tool = {
                     properties: {
                       pay_safe_card: {
                         type: 'object',
+                        additionalProperties: true,
                       },
                     },
                     required: ['pay_safe_card'],
@@ -3268,6 +3310,7 @@ export const tool: Tool = {
             properties: {
               knet: {
                 type: 'object',
+                additionalProperties: true,
               },
             },
             required: ['knet'],
@@ -3277,6 +3320,7 @@ export const tool: Tool = {
             properties: {
               benefit: {
                 type: 'object',
+                additionalProperties: true,
               },
             },
             required: ['benefit'],
@@ -3286,6 +3330,7 @@ export const tool: Tool = {
             properties: {
               momo_atm: {
                 type: 'object',
+                additionalProperties: true,
               },
             },
             required: ['momo_atm'],
@@ -3295,6 +3340,7 @@ export const tool: Tool = {
             properties: {
               card_redirect: {
                 type: 'object',
+                additionalProperties: true,
               },
             },
             required: ['card_redirect'],
@@ -3542,6 +3588,7 @@ export const tool: Tool = {
             properties: {
               fps: {
                 type: 'object',
+                additionalProperties: true,
               },
             },
             required: ['fps'],
@@ -3551,6 +3598,7 @@ export const tool: Tool = {
             properties: {
               duit_now: {
                 type: 'object',
+                additionalProperties: true,
               },
             },
             required: ['duit_now'],
@@ -3560,6 +3608,7 @@ export const tool: Tool = {
             properties: {
               prompt_pay: {
                 type: 'object',
+                additionalProperties: true,
               },
             },
             required: ['prompt_pay'],
@@ -3569,6 +3618,7 @@ export const tool: Tool = {
             properties: {
               viet_qr: {
                 type: 'object',
+                additionalProperties: true,
               },
             },
             required: ['viet_qr'],
@@ -3735,6 +3785,7 @@ export const tool: Tool = {
         properties: {
           open_banking_pis: {
             type: 'object',
+            additionalProperties: true,
           },
         },
         required: ['open_banking_pis'],

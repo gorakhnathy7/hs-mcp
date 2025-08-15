@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'update_organization',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreate a new organization for .\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/organization_response',\n  $defs: {\n    organization_response: {\n      type: 'object',\n      properties: {\n        created_at: {\n          type: 'string',\n          format: 'date-time'\n        },\n        modified_at: {\n          type: 'string',\n          format: 'date-time'\n        },\n        organization_id: {\n          type: 'string',\n          description: 'The unique identifier for the Organization'\n        },\n        metadata: {\n          type: 'object',\n          description: 'Metadata is useful for storing additional, unstructured information on an object.'\n        },\n        organization_details: {\n          type: 'object',\n          description: 'Details about the organization'\n        },\n        organization_name: {\n          type: 'string',\n          description: 'Name of the Organization'\n        }\n      },\n      required: [        'created_at',\n        'modified_at',\n        'organization_id'\n      ]\n    }\n  }\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreate a new organization for .\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/organization_response',\n  $defs: {\n    organization_response: {\n      type: 'object',\n      properties: {\n        created_at: {\n          type: 'string',\n          format: 'date-time'\n        },\n        modified_at: {\n          type: 'string',\n          format: 'date-time'\n        },\n        organization_id: {\n          type: 'string',\n          description: 'The unique identifier for the Organization'\n        },\n        metadata: {\n          type: 'object',\n          description: 'Metadata is useful for storing additional, unstructured information on an object.',\n          additionalProperties: true\n        },\n        organization_details: {\n          type: 'object',\n          description: 'Details about the organization',\n          additionalProperties: true\n        },\n        organization_name: {\n          type: 'string',\n          description: 'Name of the Organization'\n        }\n      },\n      required: [        'created_at',\n        'modified_at',\n        'organization_id'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {
@@ -32,10 +32,12 @@ export const tool: Tool = {
       metadata: {
         type: 'object',
         description: 'Metadata is useful for storing additional, unstructured information on an object.',
+        additionalProperties: true,
       },
       organization_details: {
         type: 'object',
         description: 'Details about the organization',
+        additionalProperties: true,
       },
       organization_name: {
         type: 'string',

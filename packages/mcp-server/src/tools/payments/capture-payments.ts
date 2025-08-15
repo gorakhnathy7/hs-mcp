@@ -76,10 +76,12 @@ export const tool: Tool = {
             type: 'object',
             description:
               'Account details of the Connector. You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Useful for storing additional, structured information on an object.',
+            additionalProperties: true,
           },
           metadata: {
             type: 'object',
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
+            additionalProperties: true,
           },
         },
       },

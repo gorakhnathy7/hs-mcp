@@ -78,6 +78,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Metadata is useful for storing additional, structured information on an object.',
+        additionalProperties: true,
       },
       name: {
         type: 'string',
@@ -985,6 +986,7 @@ export const tool: Tool = {
                   },
                   metadata: {
                     type: 'object',
+                    additionalProperties: true,
                   },
                   rules: {
                     type: 'object',
@@ -1035,6 +1037,7 @@ export const tool: Tool = {
                   },
                   metadata: {
                     type: 'object',
+                    additionalProperties: true,
                   },
                   rules: {
                     type: 'object',
@@ -1261,6 +1264,7 @@ export const tool: Tool = {
                   type: 'object',
                   description:
                     'Additional metadata that the Static Analyzer and Backend does not touch.\nThis can be used to store useful information for the frontend and is required for communication\nbetween the static analyzer and the frontend.',
+                  additionalProperties: true,
                 },
                 value: {
                   anyOf: [

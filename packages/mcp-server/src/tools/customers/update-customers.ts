@@ -38,6 +38,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'You can specify up to 50 keys, with key names up to 40 characters long and values up to 500\ncharacters long. Metadata is useful for storing additional, structured information on an\nobject.',
+        additionalProperties: true,
       },
       name: {
         type: 'string',
