@@ -53,6 +53,7 @@ export const tool: Tool = {
       authentication_product_ids: {
         type: 'object',
         description: 'Product authentication ids',
+        additionalProperties: true,
       },
       card_testing_guard_config: {
         $ref: '#/$defs/card_testing_guard_config',
@@ -78,6 +79,7 @@ export const tool: Tool = {
       frm_routing_algorithm: {
         type: 'object',
         description: "The frm routing algorithm to be used for routing payments to desired FRM's",
+        additionalProperties: true,
       },
       intent_fulfillment_time: {
         type: 'integer',
@@ -135,11 +137,13 @@ export const tool: Tool = {
       metadata: {
         type: 'object',
         description: 'Metadata is useful for storing additional, unstructured information on an object.',
+        additionalProperties: true,
       },
       outgoing_webhook_custom_http_headers: {
         type: 'object',
         description:
           'These key-value pairs are sent as additional custom headers in the outgoing webhook request. It is recommended not to use more than four key-value pairs.',
+        additionalProperties: true,
       },
       payment_link_config: {
         $ref: '#/$defs/business_payment_link_config',
@@ -170,6 +174,7 @@ export const tool: Tool = {
       routing_algorithm: {
         type: 'object',
         description: 'The routing algorithm to be used for routing payments to desired connectors',
+        additionalProperties: true,
       },
       session_expiry: {
         type: 'integer',
@@ -656,6 +661,7 @@ export const tool: Tool = {
           payment_link_ui_rules: {
             type: 'object',
             description: 'Payment link configuration rules',
+            additionalProperties: true,
           },
           sdk_layout: {
             type: 'string',
@@ -664,6 +670,7 @@ export const tool: Tool = {
           sdk_ui_rules: {
             type: 'object',
             description: 'SDK configuration rules',
+            additionalProperties: true,
           },
           seller_name: {
             type: 'string',
@@ -816,6 +823,7 @@ export const tool: Tool = {
                   },
                   metadata: {
                     type: 'object',
+                    additionalProperties: true,
                   },
                   rules: {
                     type: 'object',
@@ -866,6 +874,7 @@ export const tool: Tool = {
                   },
                   metadata: {
                     type: 'object',
+                    additionalProperties: true,
                   },
                   rules: {
                     type: 'object',
@@ -1092,6 +1101,7 @@ export const tool: Tool = {
                   type: 'object',
                   description:
                     'Additional metadata that the Static Analyzer and Backend does not touch.\nThis can be used to store useful information for the frontend and is required for communication\nbetween the static analyzer and the frontend.',
+                  additionalProperties: true,
                 },
                 value: {
                   anyOf: [

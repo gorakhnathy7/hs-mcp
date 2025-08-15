@@ -65,6 +65,7 @@ export const tool: Tool = {
       metadata: {
         type: 'object',
         description: 'Metadata is useful for storing additional, unstructured information on an object.',
+        additionalProperties: true,
       },
       payment_methods_enabled: {
         type: 'array',
@@ -78,6 +79,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'pm_auth_config will relate MCA records to their respective chosen auth services, based on payment_method and pmt',
+        additionalProperties: true,
       },
       test_mode: {
         type: 'boolean',
@@ -360,10 +362,12 @@ export const tool: Tool = {
             type: 'object',
             description:
               'Account details of the Connector. You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Useful for storing additional, structured information on an object.',
+            additionalProperties: true,
           },
           metadata: {
             type: 'object',
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
+            additionalProperties: true,
           },
         },
       },
@@ -374,23 +378,28 @@ export const tool: Tool = {
             type: 'object',
             description:
               'This field is for our legacy Apple Pay flow that contains the Apple Pay certificates and credentials for only iOS Apple Pay flow',
+            additionalProperties: true,
           },
           apple_pay_combined: {
             type: 'object',
             description:
               'This field contains the Apple Pay certificates and credentials for iOS and Web Apple Pay flow',
+            additionalProperties: true,
           },
           google_pay: {
             type: 'object',
             description: 'This field contains the Google Pay certificates and credentials',
+            additionalProperties: true,
           },
           paze: {
             type: 'object',
             description: 'This field contains the Paze certificates and credentials',
+            additionalProperties: true,
           },
           samsung_pay: {
             type: 'object',
             description: 'This field contains the Samsung Pay certificates and credentials',
+            additionalProperties: true,
           },
         },
       },
