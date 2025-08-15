@@ -147,6 +147,35 @@ over time, you can manually enable or disable certain capabilities:
 --resource=cards,accounts --operation=read --tag=kyc --no-tool=create_cards
 ```
 
+## Running remotely
+
+Launching the client with `--transport=http` launches the server as a remote server using Streamable HTTP transport. The `--port` setting can choose the port it will run on, and the `--socket` setting allows it to run on a Unix socket.
+
+Authorization can be provided via the `Authorization` header using the Bearer scheme.
+
+Additionally, authorization can be provided via the following headers:
+| Header | Equivalent client option | Security scheme |
+| ----------------------- | ------------------------ | --------------- |
+| `api-key` | `apiKey` | api_key |
+| `api-key` | `ephemeralKey` | ephemeral_key |
+| `x-hyperswitch-jwt-key` | `jwtKey` | jwt_key |
+| `api-key` | `publishableKey` | publishable_key |
+
+A configuration JSON for this server might look like this:
+
+```json
+{
+  "mcpServers": {
+    "hyperswitch_api": {
+      "url": "http://localhost:3000", # or wherever the server is hosted
+      "headers": {
+        "Authorization": "Bearer <auth value>"
+      }
+    }
+  }
+}
+```
+
 ## Importing the tools and server individually
 
 ```js
