@@ -1069,6 +1069,7 @@ export class Hyperswitch {
   authentication: API.Authentication = new API.Authentication(this);
   accounts: API.Accounts = new API.Accounts(this);
 }
+
 Hyperswitch.Payments = Payments;
 Hyperswitch.PaymentLink = PaymentLink;
 Hyperswitch.Relay = Relay;
@@ -1089,6 +1090,7 @@ Hyperswitch.ProfileAcquirers = ProfileAcquirers;
 Hyperswitch.ThreeDSDecisionResource = ThreeDSDecisionResource;
 Hyperswitch.Authentication = Authentication;
 Hyperswitch.Accounts = Accounts;
+
 export declare namespace Hyperswitch {
   export type RequestOptions = Opts.RequestOptions;
 
