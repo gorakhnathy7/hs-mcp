@@ -16,14 +16,14 @@ export const parseAuthHeaders = (req: IncomingMessage): Partial<ClientOptions> =
     }
   }
 
-  const apiKey = req.headers['api-key'] instanceof Array ? req.headers['api-key'][0] : req.headers['api-key'];
+  const apiKey = Array.isArray(req.headers['api-key']) ? req.headers['api-key'][0] : req.headers['api-key'];
   const ephemeralKey =
-    req.headers['api-key'] instanceof Array ? req.headers['api-key'][0] : req.headers['api-key'];
+    Array.isArray(req.headers['api-key']) ? req.headers['api-key'][0] : req.headers['api-key'];
   const jwtKey =
-    req.headers['x-hyperswitch-jwt-key'] instanceof Array ?
+    Array.isArray(req.headers['x-hyperswitch-jwt-key']) ?
       req.headers['x-hyperswitch-jwt-key'][0]
     : req.headers['x-hyperswitch-jwt-key'];
   const publishableKey =
-    req.headers['api-key'] instanceof Array ? req.headers['api-key'][0] : req.headers['api-key'];
+    Array.isArray(req.headers['api-key']) ? req.headers['api-key'][0] : req.headers['api-key'];
   return { apiKey, ephemeralKey, jwtKey, publishableKey };
 };
