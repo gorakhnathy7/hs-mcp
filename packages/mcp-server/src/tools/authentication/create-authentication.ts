@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'hyperswitch-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'hyperswitch-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import Hyperswitch from 'hyperswitch';
 
 export const metadata: Metadata = {
@@ -57,6 +56,7 @@ export const tool: Tool = {
         description: 'The URL to which the user should be redirected after authentication.',
       },
     },
+    required: ['amount', 'currency'],
     $defs: {
       currency: {
         type: 'string',
@@ -241,7 +241,6 @@ export const tool: Tool = {
             description: 'The merchant id of the card.',
           },
         },
-        required: [],
       },
       authentication_connectors: {
         type: 'string',
@@ -290,6 +289,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

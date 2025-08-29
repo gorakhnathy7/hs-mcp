@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource payments', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.payments.create({ amount: 6540, currency: 'USD' });
     const rawResponse = await responsePromise.asResponse();
@@ -23,7 +23,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.payments.create({
       amount: 6540,
@@ -277,7 +277,7 @@ describe('resource payments', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.payments.retrieve('payment_id');
     const rawResponse = await responsePromise.asResponse();
@@ -289,7 +289,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -301,7 +301,7 @@ describe('resource payments', () => {
     ).rejects.toThrow(Hyperswitch.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.payments.update('payment_id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -313,7 +313,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.payments.list();
     const rawResponse = await responsePromise.asResponse();
@@ -325,7 +325,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -346,7 +346,7 @@ describe('resource payments', () => {
     ).rejects.toThrow(Hyperswitch.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('cancel', async () => {
     const responsePromise = client.payments.cancel('payment_id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -358,7 +358,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('capture', async () => {
     const responsePromise = client.payments.capture('payment_id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -370,7 +370,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('completeAuthorize: only required params', async () => {
     const responsePromise = client.payments.completeAuthorize('payment_id', {
       client_secret: 'client_secret',
@@ -384,7 +384,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('completeAuthorize: required and optional params', async () => {
     const response = await client.payments.completeAuthorize('payment_id', {
       client_secret: 'client_secret',
@@ -407,7 +407,7 @@ describe('resource payments', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('confirm', async () => {
     const responsePromise = client.payments.confirm('payment_id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -419,7 +419,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createSessionToken: only required params', async () => {
     const responsePromise = client.payments.createSessionToken({
       client_secret: 'client_secret',
@@ -435,7 +435,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createSessionToken: required and optional params', async () => {
     const response = await client.payments.createSessionToken({
       client_secret: 'client_secret',
@@ -448,7 +448,7 @@ describe('resource payments', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('incrementalAuthorization: only required params', async () => {
     const responsePromise = client.payments.incrementalAuthorization('payment_id', { amount: 6540 });
     const rawResponse = await responsePromise.asResponse();
@@ -460,7 +460,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('incrementalAuthorization: required and optional params', async () => {
     const response = await client.payments.incrementalAuthorization('payment_id', {
       amount: 6540,
@@ -468,7 +468,7 @@ describe('resource payments', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('postSessionTokens: only required params', async () => {
     const responsePromise = client.payments.postSessionTokens('payment_id', {
       client_secret: 'client_secret',
@@ -484,7 +484,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('postSessionTokens: required and optional params', async () => {
     const response = await client.payments.postSessionTokens('payment_id', {
       client_secret: 'client_secret',
@@ -493,7 +493,7 @@ describe('resource payments', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateMetadata: only required params', async () => {
     const responsePromise = client.payments.updateMetadata('payment_id', { metadata: {} });
     const rawResponse = await responsePromise.asResponse();
@@ -505,7 +505,7 @@ describe('resource payments', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateMetadata: required and optional params', async () => {
     const response = await client.payments.updateMetadata('payment_id', { metadata: {} });
   });

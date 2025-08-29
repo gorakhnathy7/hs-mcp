@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource list', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.payouts.list.retrieve({
       created: 'created',
@@ -30,7 +30,7 @@ describe('resource list', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.payouts.list.retrieve({
       created: 'created',
@@ -42,7 +42,7 @@ describe('resource list', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('withFilters: only required params', async () => {
     const responsePromise = client.payouts.list.withFilters({
       currency: 'AED',
@@ -58,7 +58,7 @@ describe('resource list', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('withFilters: required and optional params', async () => {
     const response = await client.payouts.list.withFilters({
       currency: 'AED',

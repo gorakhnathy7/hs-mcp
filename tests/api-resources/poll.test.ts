@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource poll', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStatus', async () => {
     const responsePromise = client.poll.retrieveStatus('poll_id');
     const rawResponse = await responsePromise.asResponse();

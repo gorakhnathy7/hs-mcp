@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'hyperswitch-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'hyperswitch-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import Hyperswitch from 'hyperswitch';
 
 export const metadata: Metadata = {
@@ -69,6 +68,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Metadata is useful for storing additional, structured information on an object.',
+        additionalProperties: true,
       },
       payment_method_data: {
         type: 'object',
@@ -93,6 +93,7 @@ export const tool: Tool = {
         $ref: '#/$defs/wallet',
       },
     },
+    required: ['payment_method'],
     $defs: {
       bank: {
         anyOf: [
@@ -477,10 +478,8 @@ export const tool: Tool = {
                 description: 'The contact number',
               },
             },
-            required: [],
           },
         },
-        required: [],
       },
       address_details: {
         type: 'object',
@@ -523,7 +522,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       card_detail: {
         type: 'object',
@@ -756,6 +754,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

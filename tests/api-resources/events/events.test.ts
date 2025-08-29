@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource events', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.events.list('merchant_id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -23,7 +23,7 @@ describe('resource events', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deliveryAttempts: only required params', async () => {
     const responsePromise = client.events.deliveryAttempts('event_id', { merchant_id: 'merchant_id' });
     const rawResponse = await responsePromise.asResponse();
@@ -35,12 +35,12 @@ describe('resource events', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deliveryAttempts: required and optional params', async () => {
     const response = await client.events.deliveryAttempts('event_id', { merchant_id: 'merchant_id' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retry: only required params', async () => {
     const responsePromise = client.events.retry('event_id', { merchant_id: 'merchant_id' });
     const rawResponse = await responsePromise.asResponse();
@@ -52,7 +52,7 @@ describe('resource events', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retry: required and optional params', async () => {
     const response = await client.events.retry('event_id', { merchant_id: 'merchant_id' });
   });

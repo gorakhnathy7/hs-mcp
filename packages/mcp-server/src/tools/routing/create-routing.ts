@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'hyperswitch-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'hyperswitch-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import Hyperswitch from 'hyperswitch';
 
 export const metadata: Metadata = {
@@ -37,6 +36,7 @@ export const tool: Tool = {
         $ref: '#/$defs/transaction_type',
       },
     },
+    required: [],
     $defs: {
       static_routing_algorithm: {
         anyOf: [
@@ -98,6 +98,7 @@ export const tool: Tool = {
                   },
                   metadata: {
                     type: 'object',
+                    additionalProperties: true,
                   },
                   rules: {
                     type: 'object',
@@ -148,6 +149,7 @@ export const tool: Tool = {
                   },
                   metadata: {
                     type: 'object',
+                    additionalProperties: true,
                   },
                   rules: {
                     type: 'object',
@@ -374,6 +376,7 @@ export const tool: Tool = {
                   type: 'object',
                   description:
                     'Additional metadata that the Static Analyzer and Backend does not touch.\nThis can be used to store useful information for the frontend and is required for communication\nbetween the static analyzer and the frontend.',
+                  additionalProperties: true,
                 },
                 value: {
                   anyOf: [
@@ -551,6 +554,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

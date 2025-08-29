@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource gsm', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.gsm.create({
       clear_pan_possible: true,
@@ -33,7 +33,7 @@ describe('resource gsm', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.gsm.create({
       clear_pan_possible: true,
@@ -52,7 +52,7 @@ describe('resource gsm', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.gsm.retrieve({
       code: 'code',
@@ -70,7 +70,7 @@ describe('resource gsm', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.gsm.retrieve({
       code: 'code',
@@ -81,7 +81,7 @@ describe('resource gsm', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.gsm.update({
       code: 'code',
@@ -99,7 +99,7 @@ describe('resource gsm', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.gsm.update({
       code: 'code',
@@ -118,7 +118,7 @@ describe('resource gsm', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.gsm.delete({
       code: 'code',
@@ -136,7 +136,7 @@ describe('resource gsm', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.gsm.delete({
       code: 'code',

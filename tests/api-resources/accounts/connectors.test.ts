@@ -11,7 +11,7 @@ const client = new Hyperswitch({
 });
 
 describe('resource connectors', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.accounts.connectors.create('account_id', {
       connector_name: 'adyen',
@@ -26,7 +26,7 @@ describe('resource connectors', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.accounts.connectors.create('account_id', {
       connector_name: 'adyen',
@@ -103,7 +103,7 @@ describe('resource connectors', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.accounts.connectors.retrieve('merchant_connector_id', {
       account_id: 'account_id',
@@ -117,14 +117,14 @@ describe('resource connectors', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.accounts.connectors.retrieve('merchant_connector_id', {
       account_id: 'account_id',
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.accounts.connectors.update('merchant_connector_id', {
       account_id: 'account_id',
@@ -140,7 +140,7 @@ describe('resource connectors', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.accounts.connectors.update('merchant_connector_id', {
       account_id: 'account_id',
@@ -201,7 +201,7 @@ describe('resource connectors', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.accounts.connectors.list('account_id');
     const rawResponse = await responsePromise.asResponse();
@@ -213,7 +213,7 @@ describe('resource connectors', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.accounts.connectors.delete('merchant_connector_id', {
       account_id: 'account_id',
@@ -227,7 +227,7 @@ describe('resource connectors', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.accounts.connectors.delete('merchant_connector_id', {
       account_id: 'account_id',

@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'hyperswitch-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'hyperswitch-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import Hyperswitch from 'hyperswitch';
 
 export const metadata: Metadata = {
@@ -79,6 +78,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Metadata is useful for storing additional, structured information on an object.',
+        additionalProperties: true,
       },
       name: {
         type: 'string',
@@ -139,6 +139,7 @@ export const tool: Tool = {
           'Will be used to expire client secret after certain amount of time to be supplied in seconds\n(900) for 15 mins',
       },
     },
+    required: ['amount', 'currency'],
     $defs: {
       currency: {
         type: 'string',
@@ -328,10 +329,8 @@ export const tool: Tool = {
                 description: 'The contact number',
               },
             },
-            required: [],
           },
         },
-        required: [],
       },
       address_details: {
         type: 'object',
@@ -374,7 +373,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       country_alpha2: {
         type: 'string',
@@ -712,7 +710,6 @@ export const tool: Tool = {
             description: 'Primary color to be used in the form represented in hex format',
           },
         },
-        required: [],
       },
       method_data: {
         anyOf: [
@@ -989,6 +986,7 @@ export const tool: Tool = {
                   },
                   metadata: {
                     type: 'object',
+                    additionalProperties: true,
                   },
                   rules: {
                     type: 'object',
@@ -1039,6 +1037,7 @@ export const tool: Tool = {
                   },
                   metadata: {
                     type: 'object',
+                    additionalProperties: true,
                   },
                   rules: {
                     type: 'object',
@@ -1265,6 +1264,7 @@ export const tool: Tool = {
                   type: 'object',
                   description:
                     'Additional metadata that the Static Analyzer and Backend does not touch.\nThis can be used to store useful information for the frontend and is required for communication\nbetween the static analyzer and the frontend.',
+                  additionalProperties: true,
                 },
                 value: {
                   anyOf: [
@@ -1438,6 +1438,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

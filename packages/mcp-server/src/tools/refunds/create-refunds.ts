@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'hyperswitch-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'hyperswitch-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import Hyperswitch from 'hyperswitch';
 
 export const metadata: Metadata = {
@@ -42,6 +41,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Metadata is useful for storing additional, structured information on an object.',
+        additionalProperties: true,
       },
       reason: {
         type: 'string',
@@ -62,6 +62,7 @@ export const tool: Tool = {
         $ref: '#/$defs/split_refund',
       },
     },
+    required: ['payment_id'],
     $defs: {
       merchant_connector_details_wrap: {
         type: 'object',
@@ -85,13 +86,14 @@ export const tool: Tool = {
             type: 'object',
             description:
               'Account details of the Connector. You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long. Useful for storing additional, structured information on an object.',
+            additionalProperties: true,
           },
           metadata: {
             type: 'object',
             description: 'Metadata is useful for storing additional, unstructured information on an object.',
+            additionalProperties: true,
           },
         },
-        required: [],
       },
       split_refund: {
         anyOf: [
@@ -114,7 +116,6 @@ export const tool: Tool = {
                       "Toggle for reverting the transfer that was made during the charge.\nIf set to false, the funds are pulled from the main platform's account.",
                   },
                 },
-                required: [],
               },
             },
             required: ['stripe_split_refund'],
@@ -211,6 +212,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {

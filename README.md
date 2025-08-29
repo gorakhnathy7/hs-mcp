@@ -27,9 +27,6 @@ import Hyperswitch from 'hyperswitch';
 
 const client = new Hyperswitch({
   apiKey: process.env['HYPERSWITCH_API_KEY'], // This is the default and can be omitted
-  ephemeralKey: process.env['HYPERSWITCH_EPHEMERAL_KEY'], // This is the default and can be omitted
-  jwtKey: process.env['HYPERSWITCH_JWT_KEY'], // This is the default and can be omitted
-  publishableKey: process.env['HYPERSWITCH_PUBLISHABLE_KEY'], // This is the default and can be omitted
 });
 
 const paymentsCreateResponseOpenAPI = await client.payments.create({ amount: 6540, currency: 'USD' });
@@ -47,9 +44,6 @@ import Hyperswitch from 'hyperswitch';
 
 const client = new Hyperswitch({
   apiKey: process.env['HYPERSWITCH_API_KEY'], // This is the default and can be omitted
-  ephemeralKey: process.env['HYPERSWITCH_EPHEMERAL_KEY'], // This is the default and can be omitted
-  jwtKey: process.env['HYPERSWITCH_JWT_KEY'], // This is the default and can be omitted
-  publishableKey: process.env['HYPERSWITCH_PUBLISHABLE_KEY'], // This is the default and can be omitted
 });
 
 const params: Hyperswitch.PaymentCreateParams = { amount: 6540, currency: 'USD' };

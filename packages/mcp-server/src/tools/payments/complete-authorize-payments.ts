@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'hyperswitch-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'hyperswitch-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import Hyperswitch from 'hyperswitch';
 
 export const metadata: Metadata = {
@@ -35,6 +34,7 @@ export const tool: Tool = {
         $ref: '#/$defs/three_ds_completion_indicator',
       },
     },
+    required: ['payment_id', 'client_secret'],
     $defs: {
       address: {
         type: 'object',
@@ -57,10 +57,8 @@ export const tool: Tool = {
                 description: 'The contact number',
               },
             },
-            required: [],
           },
         },
-        required: [],
       },
       address_details: {
         type: 'object',
@@ -103,7 +101,6 @@ export const tool: Tool = {
             description: 'The zip/postal code for the address',
           },
         },
-        required: [],
       },
       country_alpha2: {
         type: 'string',
@@ -366,6 +363,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: Hyperswitch, args: Record<string, unknown> | undefined) => {
