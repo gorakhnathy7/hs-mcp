@@ -32,7 +32,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'hyperswitch_api',
-      version: '0.0.1-alpha.1',
+      version: '0.1.0-alpha.1',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
